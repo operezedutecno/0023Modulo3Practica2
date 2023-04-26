@@ -12,11 +12,25 @@ $(document).ready(function() {
         $("#resultado-destino").html(destino)
     })
 
+    $(document).on("input", "#fecha-origen", function() {
+        var fechaOrigen = $("#fecha-origen").val()
+        $("#resultado-fecha-origen").text(fechaOrigen)
+        mostrarEscalas()
+    })
+
+    $(document).on("input", "#fecha-destino", function() {
+        var fechaDestino = $("#fecha-destino").val()
+        $("#resultado-fecha-destino").text(fechaDestino)
+        mostrarEscalas()
+    })
+
     function mostrarEscalas() {
         var origen = $("#origen").val()
         var destino = $("#destino").val()
+        var fechaOrigen = $("#fecha-origen").val()
+        var fechaDestino = $("#fecha-destino").val()
 
-        var mostrarItinerario = origen !== "" && destino !== ""
+        var mostrarItinerario = origen !== "" && destino !== "" && fechaOrigen !== "" && fechaDestino !== ""
 
         if(mostrarItinerario){
             $("#contenedor-itinerario").removeClass("d-none")

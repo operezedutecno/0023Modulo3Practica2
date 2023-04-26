@@ -42,7 +42,7 @@
         </header>
         <section id="contenedor-formulario">
             <div class="row">
-                <div class="col-4 offset-4">
+                <div class="col-12 col-md-6 offset-md-3 col-xl-4 offset-xl-4">
                     <!-- <div class="display-6">¿Adónde quieres ir?</div> -->
                     <h2 class="text-center mt-5 pt-5">¿Adónde quieres ir?</h2>
                     <p class="text-secondary text-center">Estás a solo unos pasos de estar en el destino de tus sueños
@@ -59,7 +59,7 @@
                                 <option value="new york">New York, USA</option>
                                 <option value="florida">Florida, USA</option>
                             </select>
-                            <input type="date" class="mt-2 form-control">
+                            <input id="fecha-origen" type="date" class="mt-2 form-control">
                         </div>
                         <div class="col-4">
                             <div class="mb-3 text-center">Destino:</div>
@@ -70,7 +70,7 @@
                                 <option value="londres">Londres, UK</option>
                                 <option value="concepcion">Concepción, CH</option>
                             </select>
-                            <input type="date" class="mt-2 form-control">
+                            <input id="fecha-destino" type="date" class="mt-2 form-control">
                         </div>
                     </div>
                 </div>
@@ -83,17 +83,19 @@
                     <hr>
                     <div id="resultados" class="row">
                         <div class="col-4 text-center">
-                            <div id="fecha-origen" class="badge text-bg-primary bg-opacity-25 text-primary">2023-04-24</div>
+                            <div id="resultado-fecha-origen" class="badge text-bg-primary bg-opacity-25 text-primary"></div>
                             <div id="resultado-origen" class="mt-4"></div>
-                            <div class="badge text-bg-primary">Ver más información</div>
+                            <div class="badge text-bg-primary d-none d-md-inline-block">Ver más información</div>
+                            <div class="badge text-bg-primary d-md-none">Ver más</div>
                         </div>
                         <div class="col-4 text-center">
                             <div id="resultado-escala" class="mt-5 pt-3"></div>
                         </div>
                         <div class="col-4 text-center">
-                            <div id="fecha-destino" class="badge text-bg-success bg-opacity-25 text-success">2023-04-26</div>
+                            <div id="resultado-fecha-destino" class="badge text-bg-success bg-opacity-25 text-success"></div>
                             <div id="resultado-destino" class="mt-4"></div>
-                            <div class="badge text-bg-primary">Ver más información</div>
+                            <div class="badge text-bg-primary d-none d-md-inline-block">Ver más información</div>
+                            <div class="badge text-bg-primary d-md-none">Ver más</div>
                         </div>
                     </div>
                 </div>
